@@ -24,7 +24,8 @@
         margin-left: 6px;
       }
       &.selected {
-        border: 1px solid #ba2d33;
+        //border: 1px solid #ba2d33;
+        background-color: rgba(255, 255, 255, 0.2);
       }
     }
   }
