@@ -14,4 +14,8 @@
     background-color: #201d27;
     color: white;
   }
+
+  textarea.mde-text:focus {
+    outline: none;
+  }
 }
