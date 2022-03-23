@@ -6,7 +6,8 @@ import { nanoid } from "nanoid";
 
 const App = () => {
   const [notes, setNotes] = useState(
-    JSON.parse(localStorage.getItem("notes")) || []
+    //Lazy state initialization
+    () => JSON.parse(localStorage.getItem("notes")) || []
   );
   const [currentNoteId, setCurrentNoteId] = useState(
     //if notes at index is valid
