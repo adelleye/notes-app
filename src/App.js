@@ -29,15 +29,22 @@ const App = () => {
     setCurrentNoteId(newNote.id);
   }
 
+  //Update Note and put recent note on top
   function updateNote(text) {
-    setNotes((oldNotes) =>
-      oldNotes.map((oldNote) => {
-        //if old notes id equals current change/update body
-        return oldNote.id === currentNoteId
-          ? { ...oldNote, body: text }
-          : oldNote;
-      })
-    );
+    setNotes((oldNotes) => {
+      const newNotesArray = [];
+
+      for (let i = 0; i < notes.length; i++) {
+        const oldNote = oldNotes[i];
+
+        if (oldNote.id === currentNoteId) {
+          newNotesArray.unshift({ ...oldNote, body: text });
+        } else {
+          newNotesArray.push(oldNote);
+        }
+      }
+      return newNotesArray;
+    });
   }
 
   //Create a new note
