@@ -9,7 +9,12 @@ const Sidebar = (props) => {
         }`}
         onClick={() => props.setCurrentNoteId(note.id)}
       >
-        <p className="text-snippet">Note {index + 1}</p>
+        <p className="text-snippet">
+          {
+            //Get the first line of the note
+            note.body.split(/\r?\n/)[0]
+          }
+        </p>
       </div>
     </div>
   ));
