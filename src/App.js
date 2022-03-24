@@ -94,7 +94,7 @@ const App = () => {
         </div>
       )}
       <div classname="content-mobile ">
-        <h1 className="no-notes mobile-header">
+        <h1 className="content-mobile no-notes mobile-header">
           Hi there, sorry this app only works on desktop
         </h1>
       </div>
