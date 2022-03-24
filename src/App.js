@@ -86,13 +86,18 @@ const App = () => {
           )}
         </Split>
       ) : (
-        <div className="no-notes">
+        <div className=" content-desktop  no-notes ">
           <h1>You have no notes</h1>
           <button className="first-note-button" onClick={createNewNote}>
             Create one now
           </button>
         </div>
       )}
+      <div classname="content-mobile ">
+        <h1 className="no-notes mobile-header">
+          Hi there, sorry this app only works on desktop
+        </h1>
+      </div>
     </main>
   );
 };

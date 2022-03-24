@@ -193,3 +193,19 @@ select {
 .trash-icon {
   cursor: pointer;
 }
+
+.content-mobile {
+  display: none;
+}
+
+.mobile-header {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .content-desktop {
+    display: none;
+  }
+  .content-mobile {
+    display: flex;
+  }
+}

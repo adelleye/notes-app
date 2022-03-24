@@ -15,7 +15,7 @@ const Editor = ({ currentNote, updateNote }) => {
   });
 
   return (
-    <section className="pane editor">
+    <section className="content-desktop pane editor">
       <ReactMde
         value={currentNote.body}
         onChange={updateNote}
