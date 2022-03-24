@@ -180,3 +180,16 @@ select {
   display: flex;
   background-color: #404040;
 }
+
+.delete-btn {
+  display: none;
+  background: none;
+  border: none;
+}
+
+.title:hover > .delete-btn {
+  display: block;
+}
+.trash-icon {
+  cursor: pointer;
+}

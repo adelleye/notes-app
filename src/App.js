@@ -47,7 +47,7 @@ const App = () => {
     });
   }
 
-  //Create a new note
+  //Find current note
   function findCurrentNote() {
     /* loop through notes and find where notes.id === currentid?*/
     return (
@@ -55,6 +55,14 @@ const App = () => {
         return note.id === currentNoteId;
       }) || notes[0]
     );
+  }
+
+  //delete note
+  function deleteNote(event, noteId) {
+    event.stopPropagation();
+
+    console.log("delete button working", noteId);
+    setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId));
   }
 
   return (
@@ -71,6 +79,7 @@ const App = () => {
             currentNote={findCurrentNote()}
             setCurrentNoteId={setCurrentNoteId}
             newNote={createNewNote}
+            handleClick={deleteNote}
           />
           {currentNoteId && notes.length > 0 && (
             <Editor currentNote={findCurrentNote()} updateNote={updateNote} />

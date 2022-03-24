@@ -1,5 +1,6 @@
 import React from "react";
 
+import { FcEmptyTrash } from "react-icons/fc";
 const Sidebar = (props) => {
   const noteElements = props.notes.map((note, index) => (
     <div key={note.id}>
@@ -15,6 +16,13 @@ const Sidebar = (props) => {
             note.body.split(/\r?\n/)[0]
           }
         </p>
+        <button
+          className="delete-btn"
+          // Your onClick event handler here
+          onClick={(event) => props.handleClick(event, note.id)}
+        >
+          <FcEmptyTrash className="trash-icon" />
+        </button>
       </div>
     </div>
   ));
